@@ -1,6 +1,5 @@
 # ChildBedConfig
 <p>A very simple mod for Stardew Valley that can hide any combination of the crib and beds in the back room (i.e. show only the crib, hide one of the beds, hide everything).  Each save file can have a different set-up, so hiding the crib in File A will not hide it in File B.</p>
-
 ## Installation
 * Get the file from <a href="https://www.nexusmods.com/stardewvalley/mods/3540">Nexus Mods</a>
 * Unzip the contents of the file into Stardew Valley/Mods folder
@@ -47,8 +46,8 @@ For each farmer that you want to show/hide beds for, you need to add them to the
 ```
 
 ## Compatibility
-* Stardew Valley 1.3
-* SMAPI 2.10 - may work on older versions, but I haven't done any testing for them
+* Stardew Valley 1.3+
+* SMAPI 2.10+ - may work on older versions, but I haven't done any testing for them
 * Not compatible with any mods that affect the <b>maps</b> for FarmHouse2 and FarmHouse2_marriage (tilesheets should be fine)
 
 ## Bugs & Other Issues
