@@ -1,5 +1,6 @@
 # ChildBedConfig
 <p>A very simple mod for Stardew Valley that can hide any combination of the crib and beds in the back room (i.e. show only the crib, hide one of the beds, hide everything).  Each save file can have a different set-up, so hiding the crib in File A will not hide it in File B.</p>
+
 ## Installation
 * Get the file from <a href="https://www.nexusmods.com/stardewvalley/mods/3540">Nexus Mods</a>
 * Unzip the contents of the file into Stardew Valley/Mods folder
