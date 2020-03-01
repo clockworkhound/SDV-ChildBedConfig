@@ -11,68 +11,37 @@ namespace ChildBedConfig
         /*****************************/
         /**      Properties         **/
         /*****************************/
-        public List<Farmer> Farmers { get; set; }
+        //public List<Farmer> Farmers { get; set; }
 
-        /*****************************/
-        /**      Public methods     **/
-        /*****************************/
-        ///<summary>Constructor, set up the example of the config for players to follow</summary>
-        public ModConfig()
-        {
-            Farmer Default = new Farmer();
-            Farmers = new List<Farmer>();
-            Farmers.Add(Default);
-        }
+        public List<Farm> Farms { get; set; } = new List<Farm>() { };
     }
 
     /// <summary>
-    /// Class for the farmer -- we have a list of them in the config
+    /// Class for the farm -- we have a list of them in the config
+    /// </summary>
+    class Farm
+    {
+        public string FarmName { get; set; } = "";
+        public Dictionary<string, Farmer> FarmerInfo { get; set; } = new Dictionary<string, Farmer>() { };
+    }
+
+    /// <summary>
+    /// Class for the farmer -- we have a list of them in the Farm object in the config
     /// </summary>
     class Farmer
     {
         /*****************************/
         /**      Properties         **/
         /*****************************/
-        ///<summary>Name of the farmer</summary>
-        public string CharacterName { get; set; }
 
         ///<summary>Determines whether or not to show the crib</summary>
-        public bool ShowHomeCrib { get; set; }
+        public bool ShowCrib { get; set; } = true;
 
         ///<summary>Determines whether or not to show the bed closest to the crib</summary>
-        public bool ShowHomeBed1 { get; set; }
+        public bool ShowLeftBed { get; set; } = true;
 
         ///<summary>Determines whether or not to show the bed furthest from the crib</summary>
-        public bool ShowHomeBed2 { get; set; }
-
-        //This is all the same as the above, it just affects the cabins
-        public bool ShowCabinCrib { get; set; }
-        public bool ShowCabinBed1 { get; set; }
-        public bool ShowCabinBed2 { get; set; }
-
-        /*****************************/
-        /**      Public methods     **/
-        /*****************************/
-        public Farmer()
-        {
-            CharacterName = "NoName";
-            ShowHomeCrib = true;
-            ShowHomeBed1 = true;
-            ShowHomeBed2 = true;
-            ShowCabinCrib = true;
-            ShowCabinBed1 = true;
-            ShowCabinBed2 = true;
-        }
-
-        public Farmer(string name, bool showCrib, bool showBed1, bool showBed2, bool showCabinCrib, bool showCabinBed1, bool showCabinBed2)
-        {
-            CharacterName = name;
-            ShowHomeCrib = showCrib;
-            ShowHomeBed1 = showBed1;
-            ShowHomeBed2 = showBed2;
-            ShowCabinCrib = showCabinCrib;
-            ShowCabinBed1 = showCabinBed1;
-            ShowCabinBed2 = showCabinBed2;
-        }
+        public bool ShowRightBed { get; set; } = true;
+        
     }
 }
